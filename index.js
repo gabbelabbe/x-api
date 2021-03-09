@@ -1,12 +1,12 @@
-import express from 'express'
-import helmet from 'helmet'
-import morgan from 'morgan'
-import cors from 'cors'
-import Middlewares from  './src/middlewares/Middlewares.mjs'
-import Configurations from  './configurations/Configurations.mjs'
-import UserRoutes from  './src/routes/User.route.mjs'
-import ProductRoutes from  './src/routes/Product.route.mjs'
-import CartRoute from  './src/routes/Cart.route.mjs'
+const express = require('express')
+const helmet = require('helmet')
+const morgan = require('morgan')
+const cors = require('cors')
+const Middlewares = require( './src/middlewares/Middlewares.mjs')
+const Configurations = require( './configurations/Configurations.mjs')
+const UserRoutes = require( './src/routes/User.route.mjs')
+const ProductRoutes = require( './src/routes/Product.route.mjs')
+const CartRoute = require( './src/routes/Cart.route.mjs')
 
 // Config server
 const app = express()
