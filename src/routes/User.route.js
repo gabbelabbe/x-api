@@ -1,5 +1,5 @@
-import UserController from '../controllers/User.controller.mjs'
-import Middlewares from '../middlewares/Middlewares.mjs'
+const UserController = require('../controllers/User.controller.js')
+const Middlewares = require('../middlewares/Middlewares.js')
 
 const routes = (app) => {
   app.post('/user/create', UserController.createUser)
@@ -15,6 +15,6 @@ const routes = (app) => {
   app.put('/user/change/type', Middlewares.isAdmin, UserController.updateUserType)
 }
 
-export default {
+module.exports = {
   routes
 }

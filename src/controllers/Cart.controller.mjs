@@ -1,4 +1,4 @@
-import CartModel from '../models/Cart.model.mjs'
+import CartModel from '../models/Cart.model.js'
 
 const createCart = async (req, res) => {
   const cart = new CartModel({

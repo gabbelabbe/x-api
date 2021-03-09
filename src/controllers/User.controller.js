@@ -1,5 +1,5 @@
-import UserModel from '../models/User.model.mjs'
-import bcrypt from 'bcrypt'
+const UserModel = require('../models/User.model.js')
+const bcrypt = require('bcrypt')
 
 const createUser = async (req, res) => {
   const user = new UserModel({
@@ -94,7 +94,7 @@ const updateUserType = async (req, res) => {
   }
 }
 
-export default {
+module.exports = {
   createUser,
   getAllUsers,
   deleteUser,

@@ -1,4 +1,4 @@
-import dotenv from 'dotenv'
+const dotenv = require('dotenv')
 
 dotenv.config()
 
@@ -26,7 +26,7 @@ const isAdmin = (req, res, next) => {
   }
 }
 
-export default {
+module.exports = {
   notFound,
   errHandler,
   isAdmin

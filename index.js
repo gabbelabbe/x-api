@@ -2,11 +2,11 @@ const express = require('express')
 const helmet = require('helmet')
 const morgan = require('morgan')
 const cors = require('cors')
-const Middlewares = require( './src/middlewares/Middlewares.mjs')
-const Configurations = require( './configurations/Configurations.mjs')
-const UserRoutes = require( './src/routes/User.route.mjs')
-const ProductRoutes = require( './src/routes/Product.route.mjs')
-const CartRoute = require( './src/routes/Cart.route.mjs')
+const Middlewares = require( './src/middlewares/Middlewares.js')
+const Configurations = require( './configurations/Configurations.js')
+const UserRoutes = require( './src/routes/User.route.js')
+//const ProductRoutes = require( './src/routes/Product.route.js')
+//const CartRoute = require( './src/routes/Cart.route.js')
 
 // Config server
 const app = express()
@@ -22,8 +22,8 @@ app.use(cors(corsOptions))
 
 // Routes
 UserRoutes.routes(app)
-ProductRoutes.routes(app)
-CartRoute.routes(app)
+//ProductRoutes.routes(app)
+//CartRoute.routes(app)
 
 // Error handlers
 app.use(Middlewares.notFound)
@@ -33,4 +33,4 @@ app.use(Middlewares.errHandler)
 Configurations.connectToDb()
 Configurations.connectToPort(app)
 
-export default app
+module.exports = app
